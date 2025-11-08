@@ -26,6 +26,14 @@ function PevsFavoritos() {
     };
   }, []);
 
+  // callback que recebe do LocationCard
+  const handleToggle = (id: number, isFav: boolean) => {
+    if (!isFav) {
+      // remove da lista
+      setFavorites((prev) => prev.filter((loc) => loc.id !== id));
+    }
+  };
+
   return (
     <>
       <Header />
@@ -33,11 +41,18 @@ function PevsFavoritos() {
         <h1 className="favoritos-title">Meus Pontos Favoritos</h1>
 
         {favorites.length === 0 ? (
-          <p className="favoritos-empty">Você ainda não favoritou nenhum ponto de coleta.</p>
+          <p className="favoritos-empty">
+            Você ainda não favoritou nenhum ponto de coleta.
+          </p>
         ) : (
           <section className="favoritos-list">
             {favorites.map((loc) => (
-              <LocationCard key={loc.id} location={loc} className="favorito-card" />
+              <LocationCard
+                key={loc.id}
+                location={loc}
+                className="favorito-card"
+                onToggle={handleToggle}
+              />
             ))}
           </section>
         )}
