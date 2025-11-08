@@ -1,9 +1,48 @@
-import React from 'react'
+import { useState } from 'react';
+import Map from '../../components/Map/Map';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import LocationList from '../../components/LocationList/LocationList';
+import { mockLocations } from '../../mocks/locations';
+import type { Location } from '../../mocks/locations';
+import paper from '../../assets/icons/map/pin-paper.png';
+import plastic from '../../assets/icons/map/pin-plastic.png';
+import metal from '../../assets/icons/map/pin-metal.png';
+import glass from '../../assets/icons/map/pin-glass.png';
+import './PontosDeColeta.css';
 
-function PontosDeColeta() {
+const PontosDeColeta = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredLocations: Location[] = mockLocations.filter((loc) =>
+    loc.materials.includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div>MapaColeta</div>
-  )
-}
+    <div className="pontos-page">
+      <h1 className="pontos-title">Pontos de Coleta</h1>
+
+      {/* Mapa */}
+      <Map locations={filteredLocations} className="pontos-map" />
+
+      {/* Ícones de materiais */}
+      <section className="pontos-icons">
+        <div><img src={paper} alt="Papel" /><span>Papel</span></div>
+        <div><img src={plastic} alt="Plástico" /><span>Plástico</span></div>
+        <div><img src={metal} alt="Metal" /><span>Metal</span></div>
+        <div><img src={glass} alt="Vidro" /><span>Vidro</span></div>
+      </section>
+
+      <h2 className="pontos-subtitle">
+        Encontre pontos de coleta e organizações perto de você
+      </h2>
+
+      {/* Barra de busca */}
+      <SearchBar onSearch={setSearchTerm} className="pontos-search" />
+
+      {/* Lista de locais */}
+      <LocationList locations={filteredLocations} className="pontos-list" />
+    </div>
+  );
+};
 
 export default PontosDeColeta;

@@ -9,7 +9,7 @@ import PevsFavoritos from "../pages/PevsFavoritos/PevsFavoritos";
 import Preferencias from "../pages/Preferencias/Preferencias";
 import Ajuda from "../pages/Ajuda/Ajuda";
 import Notificacoes from "../pages/Notificacoes/Notificacoes";
-import MapaColeta from "../pages/PontosDeColeta/PontosDeColeta";
+import PontosDeColeta from "../pages/PontosDeColeta/PontosDeColeta";
 import Solicitacoes from "../pages/Solicitacoes/Solicitacoes";
 import Informacoes from "../pages/Informacoes/Informacoes";
 import NovaSolicitacao from "../pages/NovaSolicitacao/NovaSolicitacao";
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
   { path: "/preferencias", element: <Preferencias /> },
   { path: "/ajuda", element: <Ajuda /> },
   { path: "/notificacoes", element: <Notificacoes /> },
-  { path: "/mapa", element: <MapaColeta /> },
+  { path: "/pontos-de-coleta", element: <PontosDeColeta/> },
   { path: "/solicitacoes", element: <Solicitacoes /> },
   { path: "/informacoes", element: <Informacoes /> },
   { path: "/novasolicitacao", element: <NovaSolicitacao /> },
