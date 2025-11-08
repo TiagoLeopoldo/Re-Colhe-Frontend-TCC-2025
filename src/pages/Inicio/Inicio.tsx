@@ -1,7 +1,7 @@
 import Logo from '../../components/Logo/Logo';
 import Lixeira from '../../assets/img/lixeira.png';
 import NavButton from '../../components/NavButton/NavButton';
-import './Inicio.css'; // opcional: para estilos externos
+import './Inicio.css';
 
 function Inicio() {
   return (

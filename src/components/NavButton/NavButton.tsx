@@ -1,22 +1,31 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import type { ReactNode } from 'react';
 
 type NavButtonProps = {
-  to: string;
+  to?: string; // agora opcional
   label?: string;
   className?: string;
   children?: ReactNode;
-  state?: unknown; // novo: estado opcional para passar dados na navegação
+  state?: unknown;
+  onClick?: () => void; // novo
 };
 
-function NavButton({ to, label, className, children, state }: NavButtonProps) {
+function NavButton({ to, label, className, children, state, onClick }: NavButtonProps) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (onClick) {
+      onClick(); // executa validação
+    } else if (to) {
+      navigate(to, { state });
+    }
+  };
+
   return (
-    <Link to={to} state={state}>
-      <button type="button" className={className}>
-        {label}
-        {children}
-      </button>
-    </Link>
+    <button type="button" className={className} onClick={handleClick}>
+      {label}
+      {children}
+    </button>
   );
 }
 
