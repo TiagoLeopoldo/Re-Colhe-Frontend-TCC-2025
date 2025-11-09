@@ -37,15 +37,20 @@ function Home() {
         <ul>
           <li><NavButton to="/forum">
             <img src={forum} alt="Botão de navegação para fórum" />
-            <div><h3>Novos tópicos do Fórum</h3><span>Como otimizar o descarte?</span></div>
+            {userType === 'morador' && <div><h3>Novos tópicos do Fórum</h3><span>Onde descartar eletrônicos?</span></div>}
+            {userType === 'empresa' && <div><h3>Novos tópicos do Fórum</h3><span>Como otimizar o descarte?</span></div>}
           </NavButton></li>
+
           <li><NavButton to="/aprenda">
             <img src={check} alt="Botão de navegação para dicas" />
-            <div><h3>Dicas Sustentáveis</h3><span>Reduza custos reciclando!</span></div>
+            {userType === 'morador' && <div><h3>Dicas Sustentáveis</h3><span>O poder do vinágre e bicarbonato.</span></div>}
+            {userType === 'empresa' && <div><h3>Dicas Sustentáveis</h3><span>Reduza custos reciclando!</span></div>}
           </NavButton></li>
+
           <li><NavButton to="/notificacoes">
             <img src={notificacao} alt="Botão de navegação para notificações" />
-            <div><h3>Últimas notificações</h3><span>Coleta empresarial disponível.</span></div>
+            {userType === 'morador' && <div><h3>Últimas notificações</h3><span>Novo ponto de coleta!</span></div>}
+            {userType === 'empresa' && <div><h3>Últimas notificações</h3><span>Coleta empresarial disponível.</span></div>}
           </NavButton></li>
 
         </ul>
