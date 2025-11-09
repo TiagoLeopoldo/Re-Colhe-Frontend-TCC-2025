@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import NavButton from '../NavButton/NavButton';
+import './FooterNavBar.css';
 
 // Ícones normais
 import homeIcon from '../../assets/icons/nav-footer/home-menu.png';
@@ -18,35 +19,42 @@ const FooterNavBar = () => {
   const currentPath = location.pathname;
 
   return (
-    <footer>
-      <NavButton to="/home">
-        <img
-          src={currentPath === '/home' ? homeIconActive : homeIcon}
-          alt="Página Home"
-        />
-      </NavButton>
-
-      <NavButton to="/aprenda">
-        <img
-          src={currentPath === '/aprenda' ? aprendaIconActive : aprendaIcon}
-          alt="Página Aprenda"
-        />
-      </NavButton>
-
-      <NavButton to="/forum">
-        <img
-          src={currentPath === '/forum' ? forumIconActive : forumIcon}
-          alt="Página Fórum"
-        />
-      </NavButton>
-
-      <NavButton to="/menu">
-        <img
-          src={currentPath === '/menu' ? menuIconActive : menuIcon}
-          alt="Menu"
-        />
-      </NavButton>
-    </footer>
+    <nav className="footer-nav">
+      <ul>
+        <li>
+          <NavButton to="/home" className="home">
+            <img
+              src={currentPath === '/home' ? homeIconActive : homeIcon}
+              alt="Página Home"
+            />
+          </NavButton>
+        </li>
+        <li>
+          <NavButton to="/aprenda" className="aprenda">
+            <img
+              src={currentPath === '/aprenda' ? aprendaIconActive : aprendaIcon}
+              alt="Página Aprenda"
+            />
+          </NavButton>
+        </li>
+        <li>
+          <NavButton to="/forum" className="forum">
+            <img
+              src={currentPath === '/forum' ? forumIconActive : forumIcon}
+              alt="Página Fórum"
+            />
+          </NavButton>
+        </li>
+        <li>
+          <NavButton to="/menu" className="menu">
+            <img
+              src={currentPath === '/menu' ? menuIconActive : menuIcon}
+              alt="Menu"
+            />
+          </NavButton>
+        </li>
+      </ul>
+    </nav>
   );
 };
 
