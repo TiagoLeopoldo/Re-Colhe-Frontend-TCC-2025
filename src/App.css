@@ -30,17 +30,18 @@ html, body {
 
   /*Typography */
   --font-coolvetica: 'Coolvetica', sans-serif;
-  --font-arial: 'Arial', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
 
   --coolv-title-one: 28px;       /* 1.75rem */
-  --coolv-title-two: 22px;       /* 1.375rem */
+  --coolv-title-two: 1.375rem;       /* 22px */
   --coolv-title-thr: 18px;       /* 1.125rem */
-  --coolv-title-regular: 400;
 
-  --arial-text: 16px;            /* 1rem */
-  --arial-text-label: 14px;      /* 0.875rem */
-  --arial-text-regular: 400;
-  --arial-text--semibold: 600;
+  --font-regular: 400;
+  --font-semibold: 600;
+
+  --poppins-text: 16px;            /* 1rem */
+  --poppins-text-label: 14px;      /* 0.875rem */
+
 
     /*Spacing */
   --space-4: 0.25rem;

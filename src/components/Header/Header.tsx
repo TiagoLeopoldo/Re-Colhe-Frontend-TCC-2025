@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import NavButton from '../NavButton/NavButton';
-import Logo from '../Logo/Logo';
+import ReColhe from '../../assets/logo/logo-re-colhe.png';
 import voltar from '../../assets/icons/voltar.png';
 import moradorAvatar from '../../assets/icons/header/morador-avatar.png';
 import empresaAvatar from '../../assets/icons/header/empresa-avatar.png';
@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <header>
       {currentPath === '/home' ? (
-        <Logo />
+        <img src={ReColhe} alt="Logo da Re.Colhe" />
       ) : (
         <NavButton onClick={() => navigate(-1)}>
           <img src={voltar} alt="Voltar para página anterior" />
