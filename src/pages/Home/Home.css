@@ -24,7 +24,7 @@ background-color: var(--light-natural-green);
 border-radius: 14.37px;
 }
 
-.map-car img {
+.map-card img {
   width: 100%;
 }
 
@@ -34,6 +34,12 @@ border-radius: 14.37px;
   align-items: center;
   gap: 1.3rem;
   padding-top: 0.5rem;
+}
+
+.map-card div span {
+  font-family: var(--font-poppins);
+  font-weight: var(--font-semibold1);
+  font-size: var(--poppins-text);
 }
 
 .button-map-page {
