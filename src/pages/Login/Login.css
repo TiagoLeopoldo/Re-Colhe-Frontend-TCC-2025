@@ -133,7 +133,7 @@
   font-size: 1rem;
 }
 
-.login-buton:hover {
+.login-button:hover {
   background-color: #ffffff;
   border-color: var(--green-forest);
   color: var(--green-forest);
