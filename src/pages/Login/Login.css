@@ -123,7 +123,7 @@
 }
 
 .login-button {
-  width: 20.63rem;
+  width: 100%;
   height: 3rem;
   border-radius: 8px;
   background-color: var(--green-forest);
@@ -133,7 +133,7 @@
   font-size: 1rem;
 }
 
-.login-buton:hover {
+.login-button:hover {
   background-color: #ffffff;
   border-color: var(--green-forest);
   color: var(--green-forest);

@@ -5,7 +5,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--soft-white);
+  background-color: transparent;
   padding: 0.75rem 0.5rem 0.75rem 0.5rem;
   position: fixed;
   left: 0;
@@ -36,6 +36,6 @@ header {
 
 .avatar {
   width: 3.19rem;
-  width: 3.44rem;
+  height: 3.44rem;
 
 }

@@ -1,0 +1,56 @@
+.accordion {
+  width: 100%;
+  border: 1px solid #01402F;
+  background-color: #F9FAFB;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-header {
+  width: 100%;
+  height: 4rem;
+  background-color: #F9FAFB;
+  border: none;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem 1rem 0.75rem;
+  font-family: var(--font-poppins);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #011C15;
+}
+
+.accordion-content {
+  width: 100%;
+  padding: 16px;
+  background-color: #E4FAD4;
+  animation: fadeIn 0.3s ease-in-out;
+  font-family: var(--font-poppins);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #011C15;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -9,6 +9,7 @@ export type LoginResult =
         email: string;
         senha: string;
         token: string;
+        cep: string;
       };
     }
   | {
@@ -20,6 +21,7 @@ type LoginPayload = {
   email: string;
   senha: string;
   userType: "morador" | "empresa";
+  cep: string;
 };
 
 export function loginMock({

@@ -1,4 +1,5 @@
 import Eye from '../../assets/icons/eye-icon.png'
+import EditData from '../../assets/icons/edit-data.png'
 
 type InputProps = {
   placeholder?: string;
@@ -10,6 +11,7 @@ type InputProps = {
   id?: string;
   disabled?: boolean;
   showEyeIcon?: boolean;
+  editDataIcon?: boolean;
 };
 
 function InputBar({
@@ -22,6 +24,7 @@ function InputBar({
   id,
   disabled,
   showEyeIcon = false,
+  editDataIcon = false,
 }: InputProps) {
   return (
     <div className={className}>
@@ -36,6 +39,9 @@ function InputBar({
       />
       {showEyeIcon && (
         <img src={Eye} alt="Mostrar/esconder senha" className="eye-icon" />
+      )}
+      {editDataIcon && (
+        <img src={EditData} alt="Editar dados" className="edit-data" />
       )}
     </div>
   );

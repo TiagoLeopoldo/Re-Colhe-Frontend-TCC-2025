@@ -27,10 +27,14 @@
     gap: 0.5rem;
 }
 
+.menu-main nav ul li:hover {
+  cursor: pointer;
+}
+
 .link h3 {
   font-family: var(--font-poppins);
   font-weight: var(--font-semibold1);
-  font-size: --poppins-text-button;
+  font-size: var(--poppins-text-button);
   color: var(--moss-green);
 }
 
@@ -40,3 +44,5 @@
   font-size: var(--poppins-text-label);
   color: #000000;
 }
+
+

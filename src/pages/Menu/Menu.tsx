@@ -20,18 +20,18 @@ function Menu() {
 
   return (
     <>
-      <Header></Header>
+      <Header />
       <main className="menu-main">
         <div>{userType === 'morador' && <h1> {userName}</h1>}
           {userType === 'empresa' && <h1> {userName}</h1>}
         </div >
         <nav>
           <ul>
-            <li><img src={notepad} alt="Ícone de um bloco de notas" /><h3>Meus dados</h3></li>
+            <li><Link to="/meus-dados" className="link"><img src={notepad} alt="Ícone de um bloco de notas" /><div><h3>Meus dados</h3></div></Link></li>
             <li><Link to="/pevs" className="link"><img src={heart} alt="Ícone de um coração" /><div><h3>PEVs favoritas</h3><span>Ponto de Entrega Voluntária</span></div></Link></li>
-            <li><img src={gear} alt="Ícone de uma engranegem" /><h3>Preferências</h3></li>
-            <li><img src={help} alt="Ícone de interrogação" /><h3>Ajuda</h3></li>
-            <li><img src={logout} alt="Ícone indicando logout" /><h3>Sair</h3></li>
+            <li><Link to="/preferencias" className="link"><img src={gear} alt="Ícone de uma engranegem" /><div><h3>Preferências</h3></div></Link></li>
+            <li><Link to="/ajuda" className="link"><img src={help} alt="Ícone de interrogação" /><div><h3>Ajuda</h3></div></Link></li>
+            <li><Link to="/" className="link"><img src={logout} alt="Ícone indicando logout" /><div><h3>Sair</h3></div></Link></li>
           </ul>
         </nav>
       </main >
