@@ -17,11 +17,11 @@ export type LoginResult =
       error: string;
     };
 
-type LoginPayload = {
+export type LoginPayload = {
   email: string;
   senha: string;
   userType: "morador" | "empresa";
-  cep: string;
+  cep?: string;
 };
 
 export function loginMock({

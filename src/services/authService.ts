@@ -1,11 +1,12 @@
 import { loginMock } from '../mocks/auth/authServiceMock';
-import type { LoginResult } from '../mocks/auth/authServiceMock';
+import type { LoginPayload, LoginResult } from '../mocks/auth/authServiceMock';
 
-type LoginPayload = {
-  email: string;
-  senha: string;
-  userType: 'morador' | 'empresa';
-};
+// TODO: Usar a referência do mock enquanto não tem a implementação real
+// type LoginPayload = {
+//   email: string;
+//   senha: string;
+//   userType: 'morador' | 'empresa';
+// };
 
 export async function login(payload: LoginPayload): Promise<LoginResult> {
   // por enquanto usa mock

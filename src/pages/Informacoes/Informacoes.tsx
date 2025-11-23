@@ -1,9 +1,5 @@
-import React from 'react'
-
 function Informacoes() {
-  return (
-    <div>Informacoes</div>
-  )
+  return <div>Informacoes</div>;
 }
 
-export default Informacoes
+export default Informacoes;
