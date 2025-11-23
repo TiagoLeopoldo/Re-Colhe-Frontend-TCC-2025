@@ -7,7 +7,7 @@ import gear from '../../assets/icons/menu/gear.png';
 import help from '../../assets/icons/menu/help.png';
 import logout from '../../assets/icons/menu/logout.png';
 import { Link } from 'react-router-dom';
-import './menu.css';
+import './Menu.css';
 
 function Menu() {
   const [userType, setUserType] = useState<string | null>(null);
