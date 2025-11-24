@@ -11,9 +11,10 @@ import Ajuda from "../pages/Ajuda/Ajuda";
 import Notificacoes from "../pages/Notificacoes/Notificacoes";
 import PontosDeColeta from "../pages/PontosDeColeta/PontosDeColeta";
 import Solicitacoes from "../pages/Solicitacoes/Solicitacoes";
-import Informacoes from "../pages/Informacoes/Informacoes";
+import MenuDicas from "../pages/MenuDicas/MenuDicas";
 import NovaSolicitacao from "../pages/NovaSolicitacao/NovaSolicitacao";
 import DicasReciclagem from "../pages/DicasReciclagem/DicasReciclagem";
+import DicasEmpresa from "../pages/DicasEmpresa/DicasEmpresa";
 
 const router = createBrowserRouter([
   { path: "/", element: <Inicio /> },
@@ -28,9 +29,10 @@ const router = createBrowserRouter([
   { path: "/notificacoes", element: <Notificacoes /> },
   { path: "/pontos-de-coleta", element: <PontosDeColeta/> },
   { path: "/forum", element: <Solicitacoes /> },
-  { path: "/informacoes", element: <Informacoes /> },
+  { path: "/menu-dicas", element: <MenuDicas /> },
   { path: "/novasolicitacao", element: <NovaSolicitacao /> },
   { path: "/aprenda", element: <DicasReciclagem /> },
+  { path: "/dicas-para-empresa", element: <DicasEmpresa /> },
 ]);
 
 export default router;

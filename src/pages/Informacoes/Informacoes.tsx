@@ -1,5 +1,0 @@
-function Informacoes() {
-  return <div>Informacoes</div>;
-}
-
-export default Informacoes;
