@@ -37,7 +37,8 @@ function Map({ locations, className }: MapProps) {
             <Popup>
               <strong>{loc.name}</strong><br />
               {loc.address}<br />
-              {loc.hours}<br />
+              De {loc.openingDays}<br />
+              Das {loc.openTime} às {loc.closeTime}<br />
               {loc.phone}
             </Popup>
           </Marker>
