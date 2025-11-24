@@ -1,0 +1,44 @@
+.location-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.location-card .location-title {
+  display: flex;
+  flex: row;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-coolvetica);
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  color: #011C15;
+}
+
+.location-card .infos-container {
+  padding-left: 2.06rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.location-card .location-info {
+    font-family: var(--font-poppins);
+  font-weight: 400;
+  font-size: 0.88rem;
+  text-align: center;
+  color: #011C15;
+}
+
+.location-card .favorite-button img {
+  width: 1.56rem;
+  height: 1.56rem;
+}
+
+.location-card .favorite-button {
+  border: none;
+  background-color: transparent;
+}

@@ -25,24 +25,28 @@ const PontosDeColeta = () => {
       <main className="pontos-page">
         <h1 className="pontos-title">Pontos de Coleta</h1>
 
-        <Map locations={filteredLocations} className="pontos-map" />
+        <section className="positions-container">
+          <Map locations={filteredLocations} className="pontos-map" />
 
-        <section className="pontos-icons">
-          <div><img src={paper} alt="Papel" /><span>Papel</span></div>
-          <div><img src={plastic} alt="Plástico" /><span>Plástico</span></div>
-          <div><img src={metal} alt="Metal" /><span>Metal</span></div>
-          <div><img src={glass} alt="Vidro" /><span>Vidro</span></div>
+          <section className="pontos-icons">
+            <div><img src={paper} alt="Papel" /><span>Papel</span></div>
+            <div><img src={plastic} alt="Plástico" /><span>Plástico</span></div>
+            <div><img src={metal} alt="Metal" /><span>Metal</span></div>
+            <div><img src={glass} alt="Vidro" /><span>Vidro</span></div>
+          </section>
         </section>
 
-        <h2 className="pontos-subtitle">
-          Encontre pontos de coleta e organizações perto de você
-        </h2>
+        <section className="search-location">
+          <h2 className="pontos-subtitle">
+            Encontre pontos de coleta<br /> e organizações perto de você
+          </h2>
 
-        <SearchBar
-          onSearch={setSearchTerm}
-          placeholder="Digite o material: papel, plástico, metal ou vidro"
-          buttonLabel="Buscar"
-        />
+          <SearchBar
+            onSearch={setSearchTerm}
+            placeholder="Digite o material: papel, plástico, metal ou vidro"
+            buttonLabel="Buscar"
+          />
+        </section>
 
         <LocationList locations={filteredLocations} className="pontos-list" />
       </main>
