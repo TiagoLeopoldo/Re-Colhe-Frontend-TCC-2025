@@ -19,13 +19,14 @@
 }
 
 .search-bar button img {
-  max-width: 100%;
+  width: 1.56rem;
 }
 
 .search-bar input {
   width: 100%;
   height: 100%;
   border: none;
+  padding-left: 0.5rem;
   background-color: transparent;
   font-family: var(--font-poppins);
   font-size: var(--poppins-text-label);
