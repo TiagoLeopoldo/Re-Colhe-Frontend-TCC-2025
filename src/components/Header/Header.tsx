@@ -12,7 +12,7 @@ type HeaderProps = {
   className?: string,
 }
 
-const Header = ({ className } : HeaderProps) => {
+const Header = ({ className }: HeaderProps) => {
   const location = useLocation();
   const navigate = useNavigate();
   const currentPath = location.pathname;
@@ -23,8 +23,11 @@ const Header = ({ className } : HeaderProps) => {
     setUserType(localStorage.getItem('userType'));
   }, []);
 
+  // Define cor de fundo condicional
+  const backgroundColor = currentPath === "/meus-dados" ? "#D2EDBE" : "#F9FAFB";
+
   return (
-    <header className={className}>
+    <header className={className} style={{ backgroundColor }}>
       {currentPath === '/home' ? (
         <img src={ReColhe} alt="Logo da Re.Colhe" className="logo-header" />
       ) : (
@@ -39,7 +42,6 @@ const Header = ({ className } : HeaderProps) => {
         </NavButton>
       )}
 
-      {/* Avatar condicional */}
       {userType === 'morador' && <img src={moradorAvatar} alt="Avatar do morador" className="avatar" />}
       {userType === 'empresa' && <img src={empresaAvatar} alt="Avatar da empresa" className="avatar" />}
     </header>
