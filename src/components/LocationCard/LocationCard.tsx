@@ -10,14 +10,14 @@ import paper from '../../assets/icons/map/pin-paper.png';
 import plastic from '../../assets/icons/map/pin-plastic.png';
 import metal from '../../assets/icons/map/pin-metal.png';
 import glass from '../../assets/icons/map/pin-glass.png';
+import './LocationCard.css'
 
 type LocationCardProps = {
   location: Location;
-  className?: string;
   onToggle?: (id: number, isFav: boolean) => void; // callback para avisar o pai
 };
 
-function LocationCard({ location, className, onToggle }: LocationCardProps) {
+function LocationCard({ location, onToggle }: LocationCardProps) {
   const [favorite, setFavorite] = useState(false);
 
   // Verifica se já está favoritado ao montar
@@ -60,15 +60,17 @@ function LocationCard({ location, className, onToggle }: LocationCardProps) {
   };
 
   return (
-    <div className={className}>
+    <section className="location-card">
       <div>
         <h3 className="location-title">
           {renderMaterialIcons()}
           {location.name}
         </h3>
+        <div className="infos-container">
         <p className="location-info">{location.address}</p>
-        <p className="location-info">{location.hours}</p>
+        <p className="location-info">Aberto de {location.openingDays} das {location.openTime} às {location.closeTime}</p>
         <p className="location-info">{location.phone}</p>
+        </div>
       </div>
       <button
         className="favorite-button"
@@ -81,7 +83,8 @@ function LocationCard({ location, className, onToggle }: LocationCardProps) {
           <img src={favoritar} alt="Marcar como favorito" />
         )}
       </button>
-    </div>
+    </section>
+
   );
 }
 
