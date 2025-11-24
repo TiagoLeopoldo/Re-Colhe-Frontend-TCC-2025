@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import LocationCard from '../../components/LocationCard/LocationCard';
 import { getFavorites } from '../../services/favorites';
 import type { Location } from '../../mocks/locations';
+import heart from '../../assets/icons/menu/heart.png';
 import './PevsFavoritos.css';
 
 function PevsFavoritos() {
@@ -38,25 +39,32 @@ function PevsFavoritos() {
     <>
       <Header />
       <main className="favoritos-page">
-        <h1 className="favoritos-title">Meus Pontos Favoritos</h1>
+        <section className="favoritos-title">
+          <img src={heart} alt="Ícone de um coração" />
+          <div>
+            <h1>PEVs favoritos</h1>
+            <span>Pontos de Entrega Voluntária</span>
+          </div>
+        </section>
 
         {favorites.length === 0 ? (
-          <p className="favoritos-empty">
-            Você ainda não favoritou nenhum ponto de coleta.
-          </p>
+          <section className="favoritos-list">
+            <p className="favoritos-empty">
+              Você ainda não favoritou nenhum ponto de coleta.
+            </p>
+          </section>
         ) : (
           <section className="favoritos-list">
             {favorites.map((loc) => (
               <LocationCard
                 key={loc.id}
                 location={loc}
-                className="favorito-card"
                 onToggle={handleToggle}
               />
             ))}
           </section>
         )}
-      </main>
+      </main >
       <FooterNavBar />
     </>
   );
