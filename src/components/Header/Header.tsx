@@ -37,7 +37,7 @@ const Header = ({ className }: HeaderProps) => {
       )}
 
       {currentPath !== '/notificacoes' && (
-        <NavButton className="notifications">
+        <NavButton to="/notificacoes" className="notifications">
           <img src={notificacoes} alt="Ir para notificações" />
         </NavButton>
       )}
