@@ -1,5 +1,4 @@
 import Header from '../../components/Header/Header';
-import FooterNavBar from '../../components/FooterNavBar/FooterNavBar';
 import { useState } from 'react';
 import Map from '../../components/Map/Map';
 import SearchBar from '../../components/SearchBar/SearchBar';
@@ -50,7 +49,6 @@ const PontosDeColeta = () => {
 
         <LocationList locations={filteredLocations} className="pontos-list" />
       </main>
-      <FooterNavBar />
     </>
   );
 };

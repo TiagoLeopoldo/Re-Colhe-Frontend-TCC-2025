@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Header from '../../components/Header/Header';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import banner from '../../assets/img/home/banner-coleta.png';
@@ -8,7 +9,7 @@ import forum from '../../assets/img/home/colaboracao.png';
 import check from '../../assets/img/home/check.png';
 import notificacao from '../../assets/img/home/notificacao.png';
 import FooterNavBar from '../../components/FooterNavBar/FooterNavBar';
-import { useState, useEffect } from 'react';
+
 import './Home.css';
 
 function Home() {
@@ -35,6 +36,7 @@ function Home() {
           </div>
         </section>
 
+        <nav>
         <ul className="buttons-list">
           <li><NavButton to="/forum" className="button-navs">
             <img src={forum} alt="Botão de navegação para fórum" />
@@ -42,7 +44,7 @@ function Home() {
             {userType === 'empresa' && <div><h3>Novos tópicos do Fórum</h3><span>Como otimizar o descarte?</span></div>}
           </NavButton></li>
 
-          <li><NavButton to="/aprenda" className="button-navs">
+          <li><NavButton to="/menu-dicas" className="button-navs">
             <img src={check} alt="Botão de navegação para dicas" />
             {userType === 'morador' && <div><h3>Dicas Sustentáveis</h3><span>O poder do vinágre e bicarbonato.</span></div>}
             {userType === 'empresa' && <div><h3>Dicas Sustentáveis</h3><span>Reduza custos reciclando!</span></div>}
@@ -55,6 +57,7 @@ function Home() {
           </NavButton></li>
 
         </ul>
+        </nav>
       </main>
       <FooterNavBar />
     </>
