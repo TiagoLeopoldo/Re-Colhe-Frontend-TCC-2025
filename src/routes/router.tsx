@@ -15,6 +15,7 @@ import MenuDicas from "../pages/MenuDicas/MenuDicas";
 import NovaSolicitacao from "../pages/NovaSolicitacao/NovaSolicitacao";
 import DicasReciclagem from "../pages/DicasReciclagem/DicasReciclagem";
 import Aprender from "../pages/Aprender/Aprender";
+import ErrorPage from "../pages/ErrorPage/ErrorPage"; // 👈 import separado
 
 const router = createBrowserRouter([
   { path: "/", element: <Inicio /> },
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
   { path: "/nova-solicitacao", element: <NovaSolicitacao /> },
   { path: "/dicas-reciclagem", element: <DicasReciclagem /> },
   { path: "/aprenda", element: <Aprender /> },
+  { path: "*", element: <ErrorPage /> } // 👈 rota coringa
 ]);
 
 export default router;
