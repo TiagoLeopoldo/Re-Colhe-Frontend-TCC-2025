@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import PerfilSelector from "../pages/PerfilSelector/PerfilSelector";
@@ -15,26 +15,30 @@ import MenuDicas from "../pages/MenuDicas/MenuDicas";
 import NovaSolicitacao from "../pages/NovaSolicitacao/NovaSolicitacao";
 import DicasReciclagem from "../pages/DicasReciclagem/DicasReciclagem";
 import Aprender from "../pages/Aprender/Aprender";
-import ErrorPage from "../pages/ErrorPage/ErrorPage"; // 👈 import separado
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
-const router = createBrowserRouter([
-  { path: "/", element: <Inicio /> },
-  { path: "/selecionar-perfil", element: <PerfilSelector /> },
-  { path: "/login", element: <Login /> },
-  { path: "/home", element: <Home /> },
-  { path: "/menu", element: <Menu /> },
-  { path: "/meus-dados", element: <DadosUsuario /> },
-  { path: "/pevs", element: <PevsFavoritos /> },
-  { path: "/preferencias", element: <Preferencias /> },
-  { path: "/ajuda", element: <Ajuda /> },
-  { path: "/notificacoes", element: <Notificacoes /> },
-  { path: "/pontos-de-coleta", element: <PontosDeColeta/> },
-  { path: "/forum", element: <Forum /> },
-  { path: "/menu-dicas", element: <MenuDicas /> },
-  { path: "/nova-solicitacao", element: <NovaSolicitacao /> },
-  { path: "/dicas-reciclagem", element: <DicasReciclagem /> },
-  { path: "/aprenda", element: <Aprender /> },
-  { path: "*", element: <ErrorPage /> } // 👈 rota coringa
-]);
-
-export default router;
+export default function Router() {
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/selecionar-perfil" element={<PerfilSelector />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/meus-dados" element={<DadosUsuario />} />
+        <Route path="/pevs" element={<PevsFavoritos />} />
+        <Route path="/preferencias" element={<Preferencias />} />
+        <Route path="/ajuda" element={<Ajuda />} />
+        <Route path="/notificacoes" element={<Notificacoes />} />
+        <Route path="/pontos-de-coleta" element={<PontosDeColeta />} />
+        <Route path="/forum" element={<Forum />} />
+        <Route path="/menu-dicas" element={<MenuDicas />} />
+        <Route path="/nova-solicitacao" element={<NovaSolicitacao />} />
+        <Route path="/dicas-reciclagem" element={<DicasReciclagem />} />
+        <Route path="/aprenda" element={<Aprender />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </HashRouter>
+  );
+}
